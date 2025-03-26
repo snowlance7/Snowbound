@@ -1,7 +1,9 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using REPOLib.Objects.Sdk;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -13,7 +15,7 @@ namespace Snowbound
     {
         public const string modGUID = "Snowlance.Snowbound";
         public const string modName = "Snowbound";
-        public const string modVersion = "1.0.0";
+        public const string modVersion = "1.0.1";
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public static Plugin PluginInstance;
@@ -22,6 +24,12 @@ namespace Snowbound
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         private readonly Harmony harmony = new Harmony(modGUID);
+
+        public static ConfigEntry<bool> configEnableGlitchStatue;
+        public static ConfigEntry<bool> configEnableDiceMimicPlush;
+        public static ConfigEntry<bool> configEnableFuMolaniePlush;
+        public static ConfigEntry<bool> configEnableSCP956;
+        public static ConfigEntry<bool> configEnableNuke;
 
         public void Awake()
         {
@@ -34,21 +42,40 @@ namespace Snowbound
 
             harmony.PatchAll();
 
+            configEnableGlitchStatue = Config.Bind("Valuables", "Enable Glitch Statue", true, "Enable or disable the Glitch Statue.");
+            configEnableDiceMimicPlush = Config.Bind("Valuables", "Enable Dice Mimic Plush", true, "Enable or disable the Dice Mimic Plush.");
+            configEnableFuMolaniePlush = Config.Bind("Valuables", "Enable Fu Molanie Plush", true, "Enable or disable the Fu Molanie Plush.");
+            configEnableSCP956 = Config.Bind("Valuables", "Enable SCP-956", true, "Enable or disable SCP-956.");
+            configEnableNuke = Config.Bind("Valuables", "Enable Nuke", true, "Enable or disable the Nuke.");
+
+
             ModAssets = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Info.Location), "snowbound_assets"));
 
-            RegisterValuable("Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatueValuable.asset");
-            RegisterValuable("Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimicValuable.asset");
-            RegisterValuable("Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlushValuable.asset");
-            RegisterValuable("Assets/ModAssets/Snowbound/SCP956/SCP956Valuable.asset");
-            RegisterValuable("Assets/ModAssets/Snowbound/Nuke/NukeValuable.asset");
+            // Valuables Presets:
+            // "Valuables - Generic"
+            // "Valuables - Wizard"
+            // "Valuables - Manor"
+            // "Valuables - Arctic"
+
+            List<string> genericList = new List<string>();
+            genericList.Add("Valuables - Generic");
+
+            RegisterValuable("Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatue.prefab", genericList, configEnableGlitchStatue.Value);
+            RegisterValuable("Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimic.prefab", genericList, configEnableDiceMimicPlush.Value);
+            RegisterValuable("Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlush.prefab", genericList, configEnableFuMolaniePlush.Value);
+            RegisterValuable("Assets/ModAssets/Snowbound/SCP956/SCP956.prefab", genericList, configEnableSCP956.Value);
+            List<string> nukeLevels = new List<string>();
+            nukeLevels.Add("Valuables - Arctic");
+            RegisterValuable("Assets/ModAssets/Snowbound/Nuke/Nuke.prefab", nukeLevels, configEnableNuke.Value);
 
             Logger.LogInfo($"{modGUID} v{modVersion} has loaded!");
         }
 
-        public void RegisterValuable(string path)
+        public void RegisterValuable(string path, List<string> levelsList, bool enable = true)
         {
-            ValuableContent ValuablePrefab = ModAssets.LoadAsset<ValuableContent>(path);
-            REPOLib.Modules.Valuables.RegisterValuable(ValuablePrefab.Prefab);
+            if (!enable) { return; }
+            GameObject ValuablePrefab = ModAssets.LoadAsset<GameObject>(path);
+            REPOLib.Modules.Valuables.RegisterValuable(ValuablePrefab, levelsList);
         }
     }
 }

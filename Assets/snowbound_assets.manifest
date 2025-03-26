@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 749993923
+CRC: 2727821931
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3e3033e05282cf8bf886544ad750f042
+    Hash: b2c7669508af189c4ed4bba07444fa38
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 95487ee8229d3b3baf81102b47080ff8
+    Hash: d186b517e098bb0cc6fca5ad0f2595d0
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 3e3033e05282cf8bf886544ad750f042
+    Hash: b2c7669508af189c4ed4bba07444fa38
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -43,8 +43,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -1549797422, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
 - Class: 114
-  Script: {fileID: 1521619359, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 5e1f9ba7191111f63038bd261aeb19fe, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5ab8f401ece3e057ce511d64ce84d618, type: 3}
@@ -58,6 +56,10 @@ ClassTypes:
   Script: {fileID: 11500000, guid: ff1df5370f7af74f11d71ad866fd0a19, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 72bb657e63785f44f51afd88d9713a59, type: 3}
+- Class: 114
+  Script: {fileID: -1758226754, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
+- Class: 114
+  Script: {fileID: 1122572243, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: bb8c5cd85de75894096f8ffb1f03f295, type: 3}
 - Class: 114
@@ -74,10 +76,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 328afba7744a086ddaa619a79c16685d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 1690142c2a19245951fcb1f4197fef93, type: 3}
-- Class: 114
-  Script: {fileID: -1758226754, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
-- Class: 114
-  Script: {fileID: 1122572243, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 134
@@ -110,10 +108,10 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.UnityEvent
 Assets:
-- Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatueValuable.asset
-- Assets/ModAssets/Snowbound/SCP956/SCP956Valuable.asset
-- Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimicValuable.asset
+- Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlush.prefab
+- Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatue.prefab
+- Assets/ModAssets/Snowbound/SCP956/SCP956.prefab
+- Assets/ModAssets/Snowbound/Nuke/Nuke.prefab
 - Assets/ModAssets/Snowbound/SnowboundMod.asset
-- Assets/ModAssets/Snowbound/Nuke/NukeValuable.asset
-- Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlushValuable.asset
+- Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimic.prefab
 Dependencies: []
