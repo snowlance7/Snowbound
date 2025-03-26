@@ -39,6 +39,8 @@ namespace Snowbound
             RegisterValuable("Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatueValuable.asset");
             RegisterValuable("Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimicValuable.asset");
             RegisterValuable("Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlushValuable.asset");
+            RegisterValuable("Assets/ModAssets/Snowbound/SCP956/SCP956Valuable.asset");
+            RegisterValuable("Assets/ModAssets/Snowbound/Nuke/NukeValuable.asset");
 
             Logger.LogInfo($"{modGUID} v{modVersion} has loaded!");
         }

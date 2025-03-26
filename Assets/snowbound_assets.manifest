@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1105097836
+CRC: 749993923
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2d7010cf1d1b0ff54ac59b8621fe02f4
+    Hash: 3e3033e05282cf8bf886544ad750f042
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7cf7d505fe259e0754452bd56f72ae1a
+    Hash: 95487ee8229d3b3baf81102b47080ff8
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 2d7010cf1d1b0ff54ac59b8621fe02f4
+    Hash: 3e3033e05282cf8bf886544ad750f042
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -41,9 +41,19 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: a8fc605d86e253c130d95b9eb74debf5, type: 3}
 - Class: 114
+  Script: {fileID: -1549797422, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
+- Class: 114
+  Script: {fileID: 1521619359, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5e1f9ba7191111f63038bd261aeb19fe, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 5ab8f401ece3e057ce511d64ce84d618, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9b92d0a529fd83f8597297eac8c68a10, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6b35bc88e252b0db3321b6a042e656c7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b6f9a9af56d04043a885a83f1bc1680e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ff1df5370f7af74f11d71ad866fd0a19, type: 3}
 - Class: 114
@@ -65,9 +75,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 1690142c2a19245951fcb1f4197fef93, type: 3}
 - Class: 114
-  Script: {fileID: -1549797422, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
+  Script: {fileID: -1758226754, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 114
-  Script: {fileID: 1521619359, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
+  Script: {fileID: 1122572243, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 134
@@ -88,6 +98,8 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-CSharp
+  ClassName: PhysGrabObjectGrabArea/GrabArea
+- AssemblyName: Assembly-CSharp
   ClassName: Sound
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.ArgumentCache
@@ -99,7 +111,9 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.Events.UnityEvent
 Assets:
 - Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatueValuable.asset
+- Assets/ModAssets/Snowbound/SCP956/SCP956Valuable.asset
 - Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimicValuable.asset
 - Assets/ModAssets/Snowbound/SnowboundMod.asset
+- Assets/ModAssets/Snowbound/Nuke/NukeValuable.asset
 - Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlushValuable.asset
 Dependencies: []
