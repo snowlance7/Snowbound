@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2114046620
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: snowbound_assets
+      Dependencies: {}
