@@ -7,6 +7,9 @@
 - FuMolanie Plush
 - Glitch Statue
 - SCP-956
+- SCP-999 Plush
+- 7 candy types
+- Funo Plush
 
 More to come!
 

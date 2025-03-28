@@ -1,20 +1,22 @@
 ManifestFileVersion: 0
-CRC: 2727821931
+CRC: 4273456532
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b2c7669508af189c4ed4bba07444fa38
+    Hash: 3c94589c3341d0bcdb137aa5286ea45e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d186b517e098bb0cc6fca5ad0f2595d0
+    Hash: 98302ea51d5f0d62f8872b1d9facb7c7
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: b2c7669508af189c4ed4bba07444fa38
+    Hash: 3c94589c3341d0bcdb137aa5286ea45e
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
+  Script: {instanceID: 0}
+- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -34,12 +36,24 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
 - Class: 82
   Script: {instanceID: 0}
 - Class: 83
   Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: a8fc605d86e253c130d95b9eb74debf5, type: 3}
+- Class: 114
+  Script: {fileID: -1558716956, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
 - Class: 114
   Script: {fileID: -1549797422, guid: a61b8ee73da8579468c66016aac3253f, type: 3}
 - Class: 114
@@ -57,15 +71,29 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 72bb657e63785f44f51afd88d9713a59, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
+- Class: 114
   Script: {fileID: -1758226754, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 114
   Script: {fileID: 1122572243, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c20b921f0f6250c6ed1fdea2498755d1, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: bb8c5cd85de75894096f8ffb1f03f295, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e261796444f50417597de35c4c97b0bd, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 3e94dcf3314020481f880b97f02fc505, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f0727eaa6b245c79a70270919f6fe72c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a3c5831920c47b179b189f39981a1023, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 1dc612d23e30bc425c249e877f0d02db, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6faa03549a5d36df92fbf8280daf61c8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 02942ab980045f4bc14fcfe6eb84b28f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 627a013663f820c93f7430687080fd1d, type: 3}
 - Class: 114
@@ -76,9 +104,15 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 328afba7744a086ddaa619a79c16685d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 1690142c2a19245951fcb1f4197fef93, type: 3}
+- Class: 114
+  Script: {fileID: 136122445, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
+- Class: 114
+  Script: {fileID: 559546930, guid: f26ced5f1e2d35f46b9f942707957d3b, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 134
+  Script: {instanceID: 0}
+- Class: 135
   Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
@@ -87,6 +121,8 @@ ClassTypes:
 - Class: 169
   Script: {instanceID: 0}
 - Class: 213
+  Script: {instanceID: 0}
+- Class: 222
   Script: {instanceID: 0}
 - Class: 241
   Script: {instanceID: 0}
@@ -108,10 +144,20 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.UnityEvent
 Assets:
+- Assets/ModAssets/Snowbound/Candy/CandyBlue.prefab
+- Assets/ModAssets/Snowbound/Candy/CandyRainbow.prefab
 - Assets/ModAssets/Snowbound/FuMolaniePlush/FuMolaniePlush.prefab
 - Assets/ModAssets/Snowbound/GlitchStatue/GlitchStatue.prefab
 - Assets/ModAssets/Snowbound/SCP956/SCP956.prefab
+- Assets/ModAssets/Snowbound/WIP/SCP999Jar/SCP999JarItem.asset
 - Assets/ModAssets/Snowbound/Nuke/Nuke.prefab
 - Assets/ModAssets/Snowbound/SnowboundMod.asset
+- Assets/ModAssets/Snowbound/Candy/CandyYellow.prefab
+- Assets/ModAssets/Snowbound/Candy/CandyGreen.prefab
 - Assets/ModAssets/Snowbound/DiceMimicPlush/DiceMimic.prefab
+- Assets/ModAssets/Snowbound/Candy/CandyPurple.prefab
+- Assets/ModAssets/Snowbound/Candy/CandyPink.prefab
+- Assets/ModAssets/Snowbound/SCP999Plush/SCP999Plush.prefab
+- Assets/ModAssets/Snowbound/FunoPlush/FunoPlush.prefab
+- Assets/ModAssets/Snowbound/Candy/CandyRed.prefab
 Dependencies: []
