@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using static Snowbound.Plugin;
 
 namespace Snowbound.Valuables
 {
@@ -16,7 +17,15 @@ namespace Snowbound.Valuables
 
         float timeSinceHeal;
 
-        int healthPerSecond = 1;
+        // Configs
+        float healInterval = 5f;
+        int healAmount = 5;
+
+        public void Start()
+        {
+            healInterval = configSCP999PlushHealInterval.Value;
+            healAmount = configSCP999PlushHealAmount.Value;
+        }
 
         public void Update()
         {
@@ -26,13 +35,13 @@ namespace Snowbound.Valuables
 
                 timeSinceHeal += Time.deltaTime;
 
-                if (timeSinceHeal > 2f)
+                if (timeSinceHeal > healInterval)
                 {
                     timeSinceHeal = 0f;
 
                     foreach (var player in grabObject.playerGrabbing)
                     {
-                        player.playerAvatar.playerHealth.Heal(healthPerSecond);
+                        player.playerAvatar.playerHealth.Heal(healAmount);
                     }
 
                     int index = UnityEngine.Random.Range(0, HugSFX.Length);

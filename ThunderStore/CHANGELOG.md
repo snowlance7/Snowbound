@@ -1,3 +1,10 @@
+## 1.1.1
+- Pinata now drops candy on break
+- Funo valuable no longer plays global audio
+- Candy values lowered significantly
+- Lots of audio changes
+- Added configs for SCP999 and SCP956
+
 ## 1.1.0
 - Added FunoPlush Valuable
 - Added SCP-999 Plush Valuable

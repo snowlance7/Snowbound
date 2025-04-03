@@ -14,9 +14,6 @@ namespace Snowbound.Valuables
         public ParticleScriptExplosion particleScriptExplosion;
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
-        // Configs
-        //float explodeChance = 0.5f;
-
         public void Explode()
         {
             logger.LogDebug("Explode() called");
@@ -27,8 +24,6 @@ namespace Snowbound.Valuables
                 player.playerHealth.health = 0;
                 player.PlayerDeath(-1);
             }
-
-            //GameObject.Destroy(transform.root.gameObject);
         }
     }
 }

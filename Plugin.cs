@@ -15,15 +15,12 @@ namespace Snowbound
     {
         public const string modGUID = "Snowlance.Snowbound";
         public const string modName = "Snowbound";
-        public const string modVersion = "1.1.0";
+        public const string modVersion = "1.1.1";
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public static Plugin PluginInstance;
         public static ManualLogSource LoggerInstance;
         public static AssetBundle ModAssets;
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-
-        private readonly Harmony harmony = new Harmony(modGUID);
 
         public static ConfigEntry<bool> configEnableGlitchStatue;
         public static ConfigEntry<bool> configEnableDiceMimicPlush;
@@ -31,8 +28,20 @@ namespace Snowbound
         public static ConfigEntry<bool> configEnableSCP956;
         public static ConfigEntry<bool> configEnableNuke;
         public static ConfigEntry<bool> configEnableSCP999Plush;
-        public static ConfigEntry<bool> configEnableSCP999Jar;
         public static ConfigEntry<bool> configEnableFunoPlush;
+
+        //public static ConfigEntry<bool> configEnableSCP999Jar;
+
+        // SCP956
+        public static ConfigEntry<int> configSCP956MinCandy;
+        public static ConfigEntry<int> configSCP956MaxCandy;
+
+        // SCP999Plush
+        public static ConfigEntry<float> configSCP999PlushHealInterval;
+        public static ConfigEntry<int> configSCP999PlushHealAmount;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+
+        private readonly Harmony harmony = new Harmony(modGUID);
 
         public void Awake()
         {
@@ -51,9 +60,17 @@ namespace Snowbound
             configEnableSCP956 = Config.Bind("Valuables", "Enable SCP-956", true, "Enable or disable SCP-956.");
             configEnableNuke = Config.Bind("Valuables", "Enable Nuke", true, "Enable or disable the Nuke.");
             configEnableSCP999Plush = Config.Bind("Valuables", "Enable SCP-999 Plush", true, "Enable or disable SCP-999 Plush.");
-            configEnableSCP999Jar = Config.Bind("Items", "Enable SCP-999 Jar", true, "Enable or disable SCP-999 Jar.");
             configEnableFunoPlush = Config.Bind("Valuables", "Enable Funo Plush", true, "Enable or disable Funo Plush.");
 
+            //configEnableSCP999Jar = Config.Bind("Items", "Enable SCP-999 Jar", true, "Enable or disable SCP-999 Jar.");
+
+            // SCP956
+            configSCP956MinCandy = Config.Bind("SCP-956", "Min Candy", 5, "The min amount of candy to spawn when SCP-956 gets destroyed.");
+            configSCP956MaxCandy = Config.Bind("SCP-956", "Max Candy", 15, "The max amount of candy to spawn when SCP-956 gets destroyed.");
+
+            // SCP999Plush
+            configSCP999PlushHealInterval = Config.Bind("SCP-999 Plush", "Heal Interval", 5f, "The amount of time between heals.");
+            configSCP999PlushHealAmount = Config.Bind("SCP-999 Plush", "Heal Amount", 5, "The amount of health healed per x(Heal Interval) seconds.");
 
             ModAssets = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Info.Location), "snowbound_assets"));
 
